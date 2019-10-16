@@ -23,7 +23,7 @@ def send_request_to_collect_funds(r_id, msisdn, amount, external_id, payee_note,
     Sends an request to collect funds from the payer
     """
     client = Collection({
-        "COLLECTION_USER_ID": os.environ.get("COLLECTION_USER_ID"),
+        "COLLECTION_USER_ID": os.environ.get("COLLECTION_USER_ID"), #7a2cdxxx-1150-xxx-xxxx-8098aad2953c
         "COLLECTION_API_SECRET": os.environ.get("COLLECTION_API_SECRET"),
         "COLLECTION_PRIMARY_KEY": os.environ.get("COLLECTION_PRIMARY_KEY")
     })
@@ -36,7 +36,6 @@ def send_request_to_collect_funds(r_id, msisdn, amount, external_id, payee_note,
         payer_message=payer_message,
         currency=currency)
 
-    # We'll do the import here as celery is loaded before Django apps
     from momo_app.models import MomoRequest
     momo_request = MomoRequest.objects.filter(id=r_id)
     if 'reference' in response:

@@ -73,11 +73,22 @@ WSGI_APPLICATION = 'momo_python_django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'momo_app',
+        'USER': 'root',
+        'PASSWORD': 'Alpha85.',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -119,6 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Add celery settings to handle asynchronous jobs 
 BROKER_URL = 'redis://localhost:6379'

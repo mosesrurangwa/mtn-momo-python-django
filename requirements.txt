@@ -1,1 +1,7 @@
-
+Django==2.2.6
+amqp==2.5.1
+celery==3.1.18
+mtnmomo==3.0.1
+phonenumbers==8.10.20
+redis==2.10.3
+zipp==0.6.0
