@@ -1,4 +1,4 @@
-# Python/Django MTN MOMO API Integration
+# Python/Django MTN MOMO
 
 # Description
 
