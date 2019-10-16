@@ -1,0 +1,1 @@
+default_app_config = 'momo_app.apps.MomoAppConfig'

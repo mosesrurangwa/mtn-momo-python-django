@@ -9,6 +9,6 @@ class MomoRequest(models.Model):
     payee_note = models.TextField(blank=False)
     payee_message = models.TextField(blank=False)
     currency = models.CharField(max_length=25, blank=False)
-    transaction_ref = models.TextField()
+    reference = models.TextField()
     request_status = models.CharField(max_length=250)
-    lastest_api_response = models.TextField()
+    new_momo_response = models.TextField()
