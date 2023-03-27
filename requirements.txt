@@ -3,5 +3,5 @@ amqp==2.5.1
 celery==5.2.2
 mtnmomo==3.0.1
 phonenumbers==8.10.20
-redis==2.10.3
+redis==4.5.3
 zipp==0.6.0
