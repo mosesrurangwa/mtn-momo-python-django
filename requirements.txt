@@ -1,4 +1,4 @@
-Django==4.2.17
+Django==4.2.18
 amqp==2.5.1
 celery==5.2.2
 mtnmomo==3.0.1
